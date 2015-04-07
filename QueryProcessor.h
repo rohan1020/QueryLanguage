@@ -18,7 +18,6 @@ using namespace std;
 
 class QueryProcessor {
     
-    Query query;
     
 public:
     
@@ -27,6 +26,8 @@ public:
     Table Projection(Table table, vector<Attribute> attrs);
     
     Table selector(Table table, Filter filter);
+    
+    Table query(Query qry);
 };
 
 #endif /* defined(__QueryLanguage__QueryProcessor__) */

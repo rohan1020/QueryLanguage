@@ -20,13 +20,15 @@ int main(int argc, const char * argv[]) {
     t.print();
     
     QueryProcessor qp ;
-    vector<Attribute> atrs ;
-        
-    atrs.push_back(* new Attribute("id", 0));
+//    vector<Attribute> atrs ;
+//        
+//    atrs.push_back(* new Attribute("id", 0));
+//    
+//    Filter f(* new Attribute("id", 0), 1, "1");
     
-    Filter f(* new Attribute("id", 0), 1, "1");
+    Query q ;
     
-    Table t2 = qp.selector(t, f);
+    Table t2 = qp.query(q);
     
     cout <<"\n\n";
     
