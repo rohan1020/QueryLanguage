@@ -25,6 +25,7 @@ public:
     
     string name ;
     int index;
+    int type ; // int or string or date or float
 };
 
 #endif /* defined(__QueryLanguage__Attribute__) */

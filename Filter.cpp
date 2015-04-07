@@ -14,7 +14,7 @@ Filter::Filter()
 }
 
 
-Filter::Filter(Attribute pattribute, string poperatr, string poperand):attribute(pattribute), operatr(poperatr), operand(poperand)
+Filter::Filter(Attribute pattribute, int poperatr, string poperand):attribute(pattribute), operatr(poperatr), operand(poperand)
 {
     
     

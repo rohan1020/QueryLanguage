@@ -24,7 +24,9 @@ int main(int argc, const char * argv[]) {
         
     atrs.push_back(* new Attribute("id", 0));
     
-    Table t2 = qp.Projection(t, atrs);
+    Filter f(* new Attribute("id", 0), 1, "1");
+    
+    Table t2 = qp.selector(t, f);
     
     cout <<"\n\n";
     

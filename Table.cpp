@@ -12,8 +12,11 @@ using namespace std;
 
 Table::Table()
 {
-    attributes.push_back("id");
-    attributes.push_back("name");
+    
+    attrs.push_back(* new Attribute("id", 0));
+    attrs.push_back(* new Attribute("name", 1));
+    
+    updateAttributes(attrs);
     
     vector<string> row;
     

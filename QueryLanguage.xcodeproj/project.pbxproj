@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		761AE2F11AD476D900D1DCBE /* Filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 761AE2EF1AD476D900D1DCBE /* Filter.cpp */; };
+		761AE2F41AD47AAE00D1DCBE /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 761AE2F21AD47AAE00D1DCBE /* Cell.cpp */; };
 		769CA8891AD2F74000431A9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA8881AD2F74000431A9A /* main.cpp */; };
 		769CA8911AD2F87100431A9A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA88F1AD2F87100431A9A /* Table.cpp */; };
 		769CA8941AD3014000431A9A /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA8921AD3014000431A9A /* Database.cpp */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		761AE2EF1AD476D900D1DCBE /* Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Filter.cpp; sourceTree = "<group>"; };
 		761AE2F01AD476D900D1DCBE /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		761AE2F21AD47AAE00D1DCBE /* Cell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cell.cpp; sourceTree = "<group>"; };
+		761AE2F31AD47AAE00D1DCBE /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		769CA8851AD2F74000431A9A /* QueryLanguage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QueryLanguage; sourceTree = BUILT_PRODUCTS_DIR; };
 		769CA8881AD2F74000431A9A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		769CA88F1AD2F87100431A9A /* Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Table.cpp; sourceTree = "<group>"; };
@@ -59,6 +62,8 @@
 		769CA87C1AD2F74000431A9A = {
 			isa = PBXGroup;
 			children = (
+				761AE2F21AD47AAE00D1DCBE /* Cell.cpp */,
+				761AE2F31AD47AAE00D1DCBE /* Cell.h */,
 				761AE2EF1AD476D900D1DCBE /* Filter.cpp */,
 				761AE2F01AD476D900D1DCBE /* Filter.h */,
 				769CA89B1AD46A0C00431A9A /* Attribute.cpp */,
@@ -149,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				769CA89D1AD46A0C00431A9A /* Attribute.cpp in Sources */,
+				761AE2F41AD47AAE00D1DCBE /* Cell.cpp in Sources */,
 				769CA8911AD2F87100431A9A /* Table.cpp in Sources */,
 				769CA8971AD30E7000431A9A /* QueryProcessor.cpp in Sources */,
 				761AE2F11AD476D900D1DCBE /* Filter.cpp in Sources */,

@@ -20,12 +20,12 @@ class Filter {
 public:
     
     Attribute attribute;
-    string operatr ;
+    int operatr ;
     string operand ;
     
     Filter();
     
-    Filter(Attribute pattribute, string poperatr, string poperand);
+    Filter(Attribute pattribute, int poperatr, string poperand);
     
 };
 
