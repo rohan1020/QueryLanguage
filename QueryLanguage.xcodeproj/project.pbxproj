@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761AE2F11AD476D900D1DCBE /* Filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 761AE2EF1AD476D900D1DCBE /* Filter.cpp */; };
 		769CA8891AD2F74000431A9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA8881AD2F74000431A9A /* main.cpp */; };
+		769CA8911AD2F87100431A9A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA88F1AD2F87100431A9A /* Table.cpp */; };
+		769CA8941AD3014000431A9A /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA8921AD3014000431A9A /* Database.cpp */; };
+		769CA8971AD30E7000431A9A /* QueryProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA8951AD30E7000431A9A /* QueryProcessor.cpp */; };
+		769CA89A1AD30F3500431A9A /* Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA8981AD30F3500431A9A /* Query.cpp */; };
+		769CA89D1AD46A0C00431A9A /* Attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 769CA89B1AD46A0C00431A9A /* Attribute.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +29,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		761AE2EF1AD476D900D1DCBE /* Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Filter.cpp; sourceTree = "<group>"; };
+		761AE2F01AD476D900D1DCBE /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
 		769CA8851AD2F74000431A9A /* QueryLanguage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QueryLanguage; sourceTree = BUILT_PRODUCTS_DIR; };
 		769CA8881AD2F74000431A9A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		769CA88F1AD2F87100431A9A /* Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Table.cpp; sourceTree = "<group>"; };
+		769CA8901AD2F87100431A9A /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		769CA8921AD3014000431A9A /* Database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Database.cpp; sourceTree = "<group>"; };
+		769CA8931AD3014000431A9A /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		769CA8951AD30E7000431A9A /* QueryProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QueryProcessor.cpp; sourceTree = "<group>"; };
+		769CA8961AD30E7000431A9A /* QueryProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryProcessor.h; sourceTree = "<group>"; };
+		769CA8981AD30F3500431A9A /* Query.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Query.cpp; sourceTree = "<group>"; };
+		769CA8991AD30F3500431A9A /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		769CA89B1AD46A0C00431A9A /* Attribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Attribute.cpp; sourceTree = "<group>"; };
+		769CA89C1AD46A0C00431A9A /* Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attribute.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,18 @@
 		769CA87C1AD2F74000431A9A = {
 			isa = PBXGroup;
 			children = (
+				761AE2EF1AD476D900D1DCBE /* Filter.cpp */,
+				761AE2F01AD476D900D1DCBE /* Filter.h */,
+				769CA89B1AD46A0C00431A9A /* Attribute.cpp */,
+				769CA89C1AD46A0C00431A9A /* Attribute.h */,
+				769CA8981AD30F3500431A9A /* Query.cpp */,
+				769CA8991AD30F3500431A9A /* Query.h */,
+				769CA8951AD30E7000431A9A /* QueryProcessor.cpp */,
+				769CA8961AD30E7000431A9A /* QueryProcessor.h */,
+				769CA8921AD3014000431A9A /* Database.cpp */,
+				769CA8931AD3014000431A9A /* Database.h */,
+				769CA88F1AD2F87100431A9A /* Table.cpp */,
+				769CA8901AD2F87100431A9A /* Table.h */,
 				769CA8871AD2F74000431A9A /* QueryLanguage */,
 				769CA8861AD2F74000431A9A /* Products */,
 			);
@@ -118,6 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769CA89D1AD46A0C00431A9A /* Attribute.cpp in Sources */,
+				769CA8911AD2F87100431A9A /* Table.cpp in Sources */,
+				769CA8971AD30E7000431A9A /* QueryProcessor.cpp in Sources */,
+				761AE2F11AD476D900D1DCBE /* Filter.cpp in Sources */,
+				769CA8941AD3014000431A9A /* Database.cpp in Sources */,
+				769CA89A1AD30F3500431A9A /* Query.cpp in Sources */,
 				769CA8891AD2F74000431A9A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +268,7 @@
 				769CA88E1AD2F74000431A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
