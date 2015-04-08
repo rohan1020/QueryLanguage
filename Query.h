@@ -35,5 +35,7 @@ public:
     
     Query(string qry);
     
+    void parseString(string str) ;
+    
 };
 #endif /* defined(__QueryLanguage__Query__) */

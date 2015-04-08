@@ -20,7 +20,7 @@ using namespace std ;
 
 class Table {
     
-    public:
+public:
     
     vector<string> attributes ;
     vector<vector<string> > tuples;
@@ -36,6 +36,8 @@ class Table {
     void updateAttributes(vector<Attribute> pattrs);
     
     string getCell(int row, Attribute attribute);
+    
+    int getAttrIdx(string attr);
     
 };
 

@@ -1,32 +1,27 @@
-//
-//  main.cpp
-//  QueryLanguage
-//
-//  Created by Rohan Raja on 06/04/15.
-//  Copyright (c) 2015 Rohan Raja. All rights reserved.
-//
-
 #include <iostream>
+
 #include "Table.h"
 #include "QueryProcessor.h"
 
+
 using namespace std;
 
-int main(int argc, const char * argv[]) {
-    
+int main()
+{
     Table t;
     
-    
+    cout << "\nThe given table is : \n\n" ;
     t.print();
     
-    QueryProcessor qp ;
-//    vector<Attribute> atrs ;
-//        
-//    atrs.push_back(* new Attribute("id", 0));
-//    
-//    Filter f(* new Attribute("id", 0), 1, "1");
+    cout << "\n\nPlease enter your SQL query : " ;
     
-    Query q ;
+    QueryProcessor qp ;
+    
+    string qrytt ;
+    
+    getline (cin,qrytt);
+    
+    Query q(qrytt) ;
     
     Table t2 = qp.query(q);
     

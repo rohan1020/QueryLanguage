@@ -59,7 +59,7 @@ void Table::clear()
 {
     tuples.clear();
     attributes.clear();
-
+    
 }
 
 
@@ -74,6 +74,17 @@ void Table::updateAttributes(vector<Attribute> pattrs)
     }
 }
 
+int Table::getAttrIdx(string attr)
+{
+    for(int i=0; i<attributes.size(); i++)
+    {
+        if(attributes[i] == attr)
+            return i;
+    }
+    
+    return -1;
+    
+}
 
 string Table::getCell(int row, Attribute attribute)
 {
