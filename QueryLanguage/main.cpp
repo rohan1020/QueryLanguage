@@ -25,9 +25,9 @@ int main()
     
     Table t2 = qp.query(q);
     
-    cout <<"\n\n";
+    cout << "\nThe query result is : \n\n" ;
     
     t2.print();
     
-    cout << "\n";
+    cout << "\n\nThank You\n\n";
 }

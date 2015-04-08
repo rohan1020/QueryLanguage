@@ -123,10 +123,15 @@ void Query::parseString(string str)
     tables.push_back(* new Table());
     
     
+    if(filter_str.size() > 0)
+    {
+        Filter f = getFilter(filter_str, tables[0]);
     
-    Filter f = getFilter(filter_str, tables[0]);
+        filters.push_back(f);
+    }
     
-    filters.push_back(f);
+    if(proj_attrs[0] == "*")
+        proj_attrs = tables[0].attributes ;
     
     for(int i=0; i<proj_attrs.size(); i++)
     {
