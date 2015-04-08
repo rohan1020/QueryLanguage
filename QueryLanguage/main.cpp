@@ -19,10 +19,11 @@ int main()
     t1.print();
     
     
+    
     cout << "\n\nPlease enter your SQL query : " ;
     
     QueryProcessor qp ;
-    
+  
     string qrytt ;
     
     getline (cin,qrytt);

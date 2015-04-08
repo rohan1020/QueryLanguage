@@ -132,6 +132,12 @@ Table QueryProcessor::diffQuery(Query qry)
     return diffTables(qry.tables[0], qry.tables[1]);
 }
 
+
+Table QueryProcessor::crossQuery(Query qry)
+{
+    return crossProductTables(qry.tables[0], qry.tables[1]);
+}
+
 Table QueryProcessor::query(Query qry)
 {
     switch (qry.qry_type) {
@@ -146,6 +152,10 @@ Table QueryProcessor::query(Query qry)
         
         case 2:
             return diffQuery(qry);
+            break;
+            
+        case 3:
+            return crossQuery(qry);
             break;
             
         default:
@@ -223,12 +233,30 @@ Table QueryProcessor::crossProductTables(Table t1, Table t2)
     t = t1;
     t.tuples.clear();
     
-    for(int i =0; i< t1.tuples.size(); i++)
+    vector<Attribute> finalAttrs = t.attrs;
+    
+    for(int i=0; i<t2.attrs.size(); i++)
     {
-        if(!checkRowinTable(t2,t1.tuples[i]))
-            t.tuples.push_back(t1.tuples[i]);
-        
+        finalAttrs.push_back(t2.attrs[i]);
     }
     
+    t.updateAttributes(finalAttrs);
+    
+    for(int i=0; i<t1.tuples.size(); i++)
+    {
+        vector<string> r1 = t1.tuples[i];
+        
+        for(int j=0; j<t2.tuples.size(); j++)
+        {
+            vector<string> r2 = t2.tuples[j];
+            
+            vector<string> row = r1;
+            row.insert(row.end(), r2.begin(), r2.end());
+            
+            t.tuples.push_back(row);
+        }
+        
+    }
+        
     return t;
 }

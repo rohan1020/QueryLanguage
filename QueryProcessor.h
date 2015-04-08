@@ -40,6 +40,8 @@ public:
     Table unionQuery(Query qry) ;
     
     Table diffQuery(Query qry) ;
+    
+    Table crossQuery(Query qry) ;
 };
 
 #endif /* defined(__QueryLanguage__QueryProcessor__) */

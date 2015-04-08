@@ -89,6 +89,12 @@ void Query::parseString(string str)
             
         }
         
+        if(listOfWords[i] == "cross")
+        {
+            qry_type = 3;
+            
+        }
+        
         if(listOfWords[i] == "select")
         {
             qry_type = 0;
