@@ -121,3 +121,46 @@ Table QueryProcessor::query(Query qry)
     
     return Projection(curTable, qry.projection_attributes);
 }
+
+bool checkEqualRow(vector<string> r1, vector<string> r2)
+{
+    if(r1.size() != r2.size())
+        return false;
+    
+    for(int i=0; i<r1.size(); i++)
+    {
+        if(r1[i] != r2[i])
+            return false;
+    }
+    
+    return true ;
+}
+
+bool checkRowinTable(Table t, vector<string> row)
+{
+    for(int j=0; j <t.tuples.size(); j++)
+    {
+        if(checkEqualRow(t.tuples[j], row))
+            return true ;
+    }
+    
+    return false;
+}
+
+Table QueryProcessor::unionTables(Table t1, Table t2)
+{
+    Table t ;
+    t.clear();
+    
+    t = t1;
+    
+    for(int i =0; i< t2.tuples.size(); i++)
+    {
+        if(! checkRowinTable(t,t2.tuples[i]))
+            t.tuples.push_back(t2.tuples[i]);
+            
+    }
+    
+    return t;
+}
+

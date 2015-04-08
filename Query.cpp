@@ -146,5 +146,4 @@ void Query::parseString(string str)
 Query::Query(string qry):queryText(qry)
 {
     parseString(queryText);
-    
 }

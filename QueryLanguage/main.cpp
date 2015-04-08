@@ -13,6 +13,12 @@ int main()
     cout << "\nThe given table is : \n\n" ;
     t.print();
     
+    Table t1(1);
+    
+    cout << "\n\nThe given second table is : \n\n" ;
+    t1.print();
+    
+    
     cout << "\n\nPlease enter your SQL query : " ;
     
     QueryProcessor qp ;

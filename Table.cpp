@@ -15,6 +15,8 @@ Table::Table()
     
     attrs.push_back(* new Attribute("id", 0));
     attrs.push_back(* new Attribute("name", 1));
+    attrs.push_back(* new Attribute("age", 2));
+    attrs.push_back(* new Attribute("percentile", 3));
     
     updateAttributes(attrs);
     
@@ -22,21 +24,69 @@ Table::Table()
     
     row.push_back("1");
     row.push_back("Rohan");
+    row.push_back("21");
+    row.push_back("91");
     tuples.push_back(row);
     
     row.clear();
     
     row.push_back("2");
     row.push_back("Sachin");
+    row.push_back("24");
+    row.push_back("31");
     tuples.push_back(row);
     
     row.clear();
     
     row.push_back("3");
     row.push_back("Tarin");
+    row.push_back("20");
+    row.push_back("67");
+    tuples.push_back(row);
+    
+    row.clear();
+    
+    row.push_back("4");
+    row.push_back("Mihir");
+    row.push_back("28");
+    row.push_back("99");
     tuples.push_back(row);
 }
 
+
+Table::Table(int j)
+{
+    attrs.push_back(* new Attribute("index", 0));
+    attrs.push_back(* new Attribute("surname", 1));
+    attrs.push_back(* new Attribute("age", 2));
+    attrs.push_back(* new Attribute("marks", 3));
+    
+    updateAttributes(attrs);
+    
+    vector<string> row;
+    
+    row.push_back("1");
+    row.push_back("Rohan");
+    row.push_back("21");
+    row.push_back("91");
+    tuples.push_back(row);
+    
+    row.clear();
+    
+    row.push_back("7");
+    row.push_back("Aman");
+    row.push_back("31");
+    row.push_back("95");
+    tuples.push_back(row);
+    
+    row.clear();
+    
+    row.push_back("9");
+    row.push_back("Shukla");
+    row.push_back("36");
+    row.push_back("98");
+    tuples.push_back(row);
+}
 void Table::print()
 {
     for (int i=0; i<attributes.size(); i++) {

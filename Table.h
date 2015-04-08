@@ -29,6 +29,8 @@ public:
     
     Table();
     
+    Table(int j);
+    
     void print();
     
     void clear();

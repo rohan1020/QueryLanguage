@@ -27,6 +27,8 @@ public:
     
     Table selector(Table table, Filter filter);
     
+    Table unionTables(Table t1, Table t2);
+    
     Table query(Query qry);
 };
 
