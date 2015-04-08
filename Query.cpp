@@ -77,10 +77,22 @@ void Query::parseString(string str)
     
     for(int i = 0; i < listOfWords.size(); i++){
         
+        if(listOfWords[i] == "union")
+        {
+            qry_type = 1;
+            
+        }
         
+        if(listOfWords[i] == "diff")
+        {
+            qry_type = 2;
+            
+        }
         
         if(listOfWords[i] == "select")
         {
+            qry_type = 0;
+            
             while(listOfWords[i+1] != "from")
             {
                 i++;
@@ -121,7 +133,7 @@ void Query::parseString(string str)
     
     
     tables.push_back(* new Table());
-    
+    tables.push_back(* new Table(2));
     
     if(filter_str.size() > 0)
     {
@@ -130,8 +142,9 @@ void Query::parseString(string str)
         filters.push_back(f);
     }
     
-    if(proj_attrs[0] == "*")
-        proj_attrs = tables[0].attributes ;
+    if(qry_type == 0)
+        if(proj_attrs[0] == "*")
+            proj_attrs = tables[0].attributes ;
     
     for(int i=0; i<proj_attrs.size(); i++)
     {

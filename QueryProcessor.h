@@ -29,7 +29,17 @@ public:
     
     Table unionTables(Table t1, Table t2);
     
+    Table diffTables(Table t1, Table t2);
+    
+    Table crossProductTables(Table t1, Table t2);
+    
     Table query(Query qry);
+    
+    Table selectQuery(Query qry);
+    
+    Table unionQuery(Query qry) ;
+    
+    Table diffQuery(Query qry) ;
 };
 
 #endif /* defined(__QueryLanguage__QueryProcessor__) */

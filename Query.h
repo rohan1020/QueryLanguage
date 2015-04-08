@@ -24,7 +24,7 @@ class Query {
     
 public:
     
-    int type ; // SELECT or INSERT
+    int qry_type ; // SELECT or INSERT
     
     vector<Attribute> projection_attributes ;
     vector<Table> tables;

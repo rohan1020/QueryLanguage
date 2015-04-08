@@ -103,10 +103,9 @@ Table QueryProcessor::selector(Table table, Filter filter)
     return t;
 }
 
-Table QueryProcessor::query(Query qry)
+Table QueryProcessor::selectQuery(Query qry)
 {
     vector<Table> filtered_tables ;
-    
     Table curTable = qry.tables[0];
     
     for (int i=0; i<qry.filters.size(); i++) {
@@ -120,6 +119,39 @@ Table QueryProcessor::query(Query qry)
     }
     
     return Projection(curTable, qry.projection_attributes);
+}
+
+
+Table QueryProcessor::unionQuery(Query qry)
+{
+    return unionTables(qry.tables[0], qry.tables[1]);
+}
+
+Table QueryProcessor::diffQuery(Query qry)
+{
+    return diffTables(qry.tables[0], qry.tables[1]);
+}
+
+Table QueryProcessor::query(Query qry)
+{
+    switch (qry.qry_type) {
+            
+        case 0:
+            return selectQuery(qry);
+            break;
+            
+        case 1:
+            return unionQuery(qry);
+            break;
+        
+        case 2:
+            return diffQuery(qry);
+            break;
+            
+        default:
+            break;
+    }
+    return selectQuery(qry);
 }
 
 bool checkEqualRow(vector<string> r1, vector<string> r2)
@@ -164,3 +196,39 @@ Table QueryProcessor::unionTables(Table t1, Table t2)
     return t;
 }
 
+Table QueryProcessor::diffTables(Table t1, Table t2)
+{
+    Table t ;
+    t.clear();
+    
+    t = t1;
+    t.tuples.clear();
+    
+    for(int i =0; i< t1.tuples.size(); i++)
+    {
+        if(!checkRowinTable(t2,t1.tuples[i]))
+            t.tuples.push_back(t1.tuples[i]);
+        
+    }
+    
+    return t;
+}
+
+
+Table QueryProcessor::crossProductTables(Table t1, Table t2)
+{
+    Table t ;
+    t.clear();
+    
+    t = t1;
+    t.tuples.clear();
+    
+    for(int i =0; i< t1.tuples.size(); i++)
+    {
+        if(!checkRowinTable(t2,t1.tuples[i]))
+            t.tuples.push_back(t1.tuples[i]);
+        
+    }
+    
+    return t;
+}
