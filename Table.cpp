@@ -43,6 +43,11 @@ void Table::print()
         
         cout << attributes[i] << "\t" ;
     }
+    cout << "\n";
+    for (int i=0; i<attributes.size(); i++) {
+        
+        cout << "-" << "\t" ;
+    }
     
     for(int j=0; j<tuples.size(); j++)
     {

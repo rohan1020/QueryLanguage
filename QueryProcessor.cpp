@@ -7,11 +7,14 @@
 //
 
 #include "QueryProcessor.h"
+#include <string>
+#include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
 QueryProcessor::QueryProcessor(){
- 
+    
     
     
 }
@@ -42,7 +45,7 @@ Table QueryProcessor::Projection(Table table, vector<Attribute> attrs){
 
 bool check_row(Table &table, int row, Filter &filter)
 {
- 
+    
     string op1 = table.getCell(row, filter.attribute);
     string op2 = filter.operand;
     
@@ -51,22 +54,25 @@ bool check_row(Table &table, int row, Filter &filter)
     switch (filter.operatr) {
             
         case 0: // for '='
+            
+            transform(op1.begin(), op1.end(), op1.begin(), ::tolower);
+            transform(op2.begin(), op2.end(), op2.begin(), ::tolower);
             return op1 == op2 ;
             break;
             
         case 1: // for '>'
             
-            op1_int = stoi(op1);
-            op2_int = stoi(op2);
+            op1_int = atoi(op1.c_str());
+            op2_int = atoi(op2.c_str());
             
             return op1_int > op2_int ;
             
             break;
-        
+            
         case 2: // for '<'
             
-            op1_int = stoi(op1);
-            op2_int = stoi(op2);
+            op1_int = atoi(op1.c_str());
+            op2_int = atoi(op2.c_str());
             
             return op1_int < op2_int ;
             
